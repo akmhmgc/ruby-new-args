@@ -9,3 +9,14 @@ foo(**{kwarg1: 'a', kwarg2: 'b'})
 
 # この書きかたはwarningが出る
 foo({kwarg1: 'a', kwarg2: 'b'})
+
+# キーワード引数を受け取ってHashとして扱うことができる
+def bar(**hash)
+  p hash
+end
+
+bar(kwarg1: 'a', kwarg2: 'b')
+bar(**{kwarg1: 'a', kwarg2: 'b'})
+
+# これはwarningが出る
+bar({kwarg1: 'a', kwarg2: 'b'})
