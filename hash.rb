@@ -7,3 +7,5 @@ end
 # 実はHashの各要素とキーワード引数は異なることに注意
 foo(**{kwarg1: 'a', kwarg2: 'b'})
 
+# この書きかたはwarningが出る
+foo({kwarg1: 'a', kwarg2: 'b'})
